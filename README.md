@@ -63,4 +63,4 @@ I would like to convert this webpage into a mobile app
 
 ## Heroku commands
 
- $ heroku [COMMAND] 
+ $ heroku [] 
