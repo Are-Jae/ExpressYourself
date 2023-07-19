@@ -61,6 +61,6 @@ I would like to convert this webpage into a mobile app
 - John McCambridge
 - George Yoo
 
-## Heroku commands
+<!-- ## Heroku commands
 
- $ heroku [] 
+ $ heroku []  -->
