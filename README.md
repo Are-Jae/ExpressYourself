@@ -45,6 +45,8 @@
 
 ## App
 
+- In your terminal run the command "node app.js" to start the app
+
 - tutorial []
 
 ## Repository
@@ -53,7 +55,9 @@ https://github.com/Are-Jae/ExpressYourself
 
 ## Future Usage
 
-I would like to convert this webpage into a mobile app 
+- I would like to convert this webpage into a mobile app
+- I would like for this app to have more customizable design features 
+
 
 ## Credit 
 
