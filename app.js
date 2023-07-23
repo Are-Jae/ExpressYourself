@@ -1,10 +1,11 @@
+let notes = [];
 const express = require('express');
 const bodyParser = require('body-parser');
 
 const app = express();
 const PORT = 3000;
 const mongoose = require('mongoose');
-const mongoDBUri = 'mongodb://localhost:27017/your-database-name';
+const mongoDBUri = 'mongodb://localhost:27017/expressyourself';
 
 mongoose.connect(mongoDBUri, {
   useNewUrlParser: true,
@@ -19,42 +20,36 @@ db.once('open', () => {
 });
 
 
-// Middleware
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-// Server files (html, css, client-side js)
+
+
+
+
+
+app.use(express.json());
+
+
+app.use(express.urlencoded({ extended: false }));
+
+
 app.use(express.static('public')); 
 
 
-
-
-// let notes = [];
-
-const Note = require('./models/note'); 
-
-const getNotes = async () => {
-  try {
-    const notes = await Note.find(); 
-    return notes;
-  } catch (error) {
-    console.error('Error while fetching notes:', error);
-    return []; 
-  }
-};
 
 
 const saveNote = (note) => {
   notes.push(note);
 };
 
+// Function to delete a note
 const deleteNote = (id) => {
   notes = notes.filter((note) => note.id !== id);
 };
 
-// API routes
 app.get('/api/notes', (req, res) => {
-  const notes = getNotes();
+  // Return the notes from the notes array
   res.json(notes);
 });
 
